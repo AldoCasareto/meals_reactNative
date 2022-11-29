@@ -1,23 +1,19 @@
 import { View, Text, Image, StyleSheet, Pressable, Platform } from 'react-native';
 import React from 'react';
 import Title from './ui/Title';
+import { useNavigation } from '@react-navigation/native';
 
 const MealItem = ({ item, onPress }) => {
-  const {
-    title,
-    affordability,
-    categoryIds,
-    id,
-    complexity,
-    imageUrl,
-    duration,
-    ingredients,
-    steps,
-    isGlutenFree,
-    isVegan,
-    isVegetarian,
-    isLactoseFree,
-  } = item;
+  const { title, affordability, complexity, imageUrl, duration, id } = item;
+
+  // const navigation = useNavigation();
+
+  // const onPress = () => {
+  //   navigation.navigate('MealDetail', {
+  //     mealId: id,
+  //   });
+  // };
+
   return (
     <View style={styles.cardContainer}>
       <Pressable

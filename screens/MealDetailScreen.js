@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native';
 import React from 'react';
-import DetailedItem from '../components/DetailedItem';
+import DetailedItem from '../components/DetailedMeal';
 import { MEALS } from '../data/dummy-data';
 
 const MealDetail = ({ route }) => {

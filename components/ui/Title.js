@@ -1,10 +1,10 @@
 import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
 
-const Title = ({ children }) => {
+const Title = ({ children, styleText }) => {
   return (
     <View>
-      <Text style={styles.title}>{children}</Text>
+      <Text style={[styles.title, { color: styleText }]}>{children}</Text>
     </View>
   );
 };
@@ -16,8 +16,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     textAlign: 'center',
     margin: 8,
-    // width: 300,
-    // maxWidth: '80%',
     fontWeight: 'bold',
   },
 });
