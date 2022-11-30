@@ -37,7 +37,11 @@ export default function App() {
             // }}
             component={MealsOverviewScreen}
           />
-          <Stack.Screen name='MealDetail' component={MealDetail} />
+          <Stack.Screen
+            name='MealDetail'
+            component={MealDetail}
+            // options={{ headerRight: () => <Text>In the header</Text> }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </>
