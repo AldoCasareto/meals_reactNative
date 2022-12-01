@@ -11,14 +11,14 @@ const MealDetail = ({ route, navigation }) => {
   const { mealId } = route.params;
   const mealObject = MEALS.find((meal) => meal.id === mealId);
 
-  const favoriteMealIds = useSelector((state) => state.favoriteMeals.ids);
+  // const favoriteMealIds = useSelector((state) => state.favoriteMeals.ids);
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  // const favoriteMealsCtx = useContext(FavoritesContext);
+  const favoriteMealsCtx = useContext(FavoritesContext);
 
-  // const mealIsFavorite = favoriteMealsCtx.ids.includes(mealId);
-  const mealIsFavorite = favoriteMealIds.includes(mealId);
+  const mealIsFavorite = favoriteMealsCtx.ids.includes(mealId);
+  // const mealIsFavorite = favoriteMealIds.includes(mealId);
 
   // const changeFavoriteHandler = () => {
   //   if (mealIsFavorite) {
@@ -32,9 +32,11 @@ const MealDetail = ({ route, navigation }) => {
 
   const changeFavoriteHandler = () => {
     if (mealIsFavorite) {
-      dispatch(removeFavorite({ id: mealId }));
+      // dispatch(removeFavorite({ id: mealId }));
+      favoriteMealsCtx.removeFavorite(mealId);
     } else {
-      dispatch(addFavorite({ id: mealId }));
+      // dispatch(addFavorite({ id: mealId }));
+      favoriteMealsCtx.addFavorite(mealId);
     }
   };
 

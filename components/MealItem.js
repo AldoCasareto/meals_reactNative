@@ -1,10 +1,11 @@
 import { View, Text, Image, StyleSheet, Pressable, Platform } from 'react-native';
 import React from 'react';
 import Title from './ui/Title';
-import { useNavigation } from '@react-navigation/native';
 
 const MealItem = ({ item, onPress }) => {
-  const { title, affordability, complexity, imageUrl, duration, id } = item;
+  const { title, affordability, complexity, imageUrl, duration } = item;
+
+  console.log(item);
 
   // const navigation = useNavigation();
 

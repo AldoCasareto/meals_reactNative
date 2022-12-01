@@ -9,6 +9,7 @@ const MealsList = ({ displayedMeals, navigation }) => {
         mealId: item.id,
       });
     };
+    console.log(item);
     return (
       <>
         <MealItem item={item} onPress={mealDetailHandler} />

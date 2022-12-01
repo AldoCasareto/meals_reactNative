@@ -42,8 +42,8 @@ export default function App() {
   return (
     <>
       <StatusBar style='light' />
-      {/* <FavoritesContextProvider> */}
-      <Provider store={store}>
+      <FavoritesContextProvider>
+        {/* <Provider store={store}> */}
         <NavigationContainer>
           <Stack.Navigator
             screenOptions={{
@@ -74,8 +74,8 @@ export default function App() {
             />
           </Stack.Navigator>
         </NavigationContainer>
-      </Provider>
-      {/* </FavoritesContextProvider> */}
+        {/* </Provider> */}
+      </FavoritesContextProvider>
     </>
   );
 }
